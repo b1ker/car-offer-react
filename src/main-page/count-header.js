@@ -7,8 +7,9 @@ const CountHeader = ({ count, type }) => {
   };
 
   return (
-    <header className="p-2 text-end h5" testid="total-label">
-      {type === 'total' ? 'WMI Data - Honda | Total: ' : 'WMI Data - Honda | Count: '} {count}
+    <header className="p-2 text-end h5" testid={`${type}-label`}>
+      {`WMI Data - Honda | ${type.charAt(0).toUpperCase() + type.slice(1)}: `}
+      {count}
     </header>
   );
 };

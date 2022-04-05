@@ -75,7 +75,8 @@ function App() {
                     aria-describedby="searchHelp"
                     placeholder="Enter search criteria"
                     onChange={inputHandler}
-                    testid="text-search"></input>
+                    testid="text-search"
+                  ></input>
                 </div>
                 <div className="col-sm-4 p-3 h5 content">
                   <label htmlFor="searchBox">Search for: </label>{' '}
@@ -87,7 +88,8 @@ function App() {
                     className="form-select"
                     onChange={onSearchChange}
                     testid="country-search"
-                    defaultValue={{ key: 'View all', value: 'view all' }}>
+                    defaultValue={{ key: 'View all', value: 'view all' }}
+                  >
                     {countries.map((c) => (
                       <option key={c} value={c}>
                         {c}
@@ -99,9 +101,9 @@ function App() {
                   <label htmlFor="searchBox">Choose country: </label>{' '}
                 </div>
               </div>
-              <CountHeader count={allVehicles.length} type="total" />
+              {allVehicles.length ? <CountHeader count={allVehicles.length} type="total" /> : ''}
               {filteredVehicles.length !== allVehicles.length ? (
-                <CountHeader count={filteredVehicles.length} type="count" />
+                <CountHeader count={filteredVehicles.length} type="found" />
               ) : (
                 ''
               )}
