@@ -1,5 +1,5 @@
 ## Hello
-Hi, this is Pawel. If i could spend more on the exercise i would focus on improving the code especially adding more test. I am be more than happy to discuss further !
+Hi, this is Pawel. If i could spend more on the exercise i would focus on improving the code especially adding more tests. I am more than happy to discuss further !
 
 Please note the react app needs to run on http://localhost:3000 due to CORS setup in API.
 
