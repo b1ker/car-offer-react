@@ -71,8 +71,6 @@ describe('App', () => {
       testRenderer = renderer.create(<App />);
     });
 
-    console.log(JSON.stringify(testRenderer.toJSON()));
-
     await waitFor(async () => {
       expect(testRenderer.root.findByProps({ testid: 'total-label' }).props.children[0]).toEqual(
         'WMI Data - Honda | Total: '
